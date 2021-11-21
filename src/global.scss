@@ -14,14 +14,14 @@ html {
   --tertiary: #FF585D;
 
   background-color: var(--fff);
-  color: var(--bg);
+  color: var(--black);
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   font-size: calc(.65em + 0.7vw);
   line-height: 1.3;
 
   ::selection {
     background: var(--secondary);
-    color: var(--bg);
+    color: var(--black);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -31,7 +31,7 @@ html {
 
     ::selection {
       background: var(--secondary);
-      color: var(--fg);
+      color: var(--black);
     }
   }
 }
