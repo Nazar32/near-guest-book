@@ -5,6 +5,7 @@
 html {
   --bg: #fff;
   --fg: #25282A;
+  --black: #000;
   --gray: #888;
   --royal: #0072CE;
   --blue: #6AD1E3;
@@ -12,8 +13,8 @@ html {
   --secondary: var(--royal);
   --tertiary: #FF585D;
 
-  background-color: var(--bg);
-  color: var(--fg);
+  background-color: var(--fff);
+  color: var(--bg);
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   font-size: calc(.65em + 0.7vw);
   line-height: 1.3;
@@ -113,10 +114,4 @@ button {
     border-color: var(--secondary);
     top: 1px;
   }
-}
-
-.is-premium {
-  border-left: 0.25em solid var(--secondary);
-  padding-left: 0.25em;
-  margin-left: -0.5em;
 }
