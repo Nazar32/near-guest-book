@@ -14,6 +14,7 @@ export class PostedMessage {
     this.sender = context.sender;
   }
 }
+
 /**
  * collections.vector is a persistent collection. Any changes to it will
  * be automatically saved in the storage.
@@ -21,3 +22,4 @@ export class PostedMessage {
  * It will be used as a prefix to all keys required to store data in the storage.
  */
 export const messages = new PersistentVector<PostedMessage>('m');
+export const senders = new PersistentVector<string>('s');
