@@ -10,15 +10,13 @@ import { PostedMessage, messages, senders } from './model';
 export function addMessage(text: string, createdAt: string): void {
   // Creating a new message and populating fields with our data
   const message = new PostedMessage(text, createdAt);
-  for (let i = 0; i < senders.length; i++) {
-    assert(
-      senders[i] === message.sender,
-      'Current sender has already signed a message!'
-    );
-  }
+  assert(
+    !senders.has(message.sender),
+    'Current sender has already signed a message!'
+  );
   // Adding the message to end of the the persistent collection
   messages.push(message);
-  senders.push(message.sender);
+  senders.add(message.sender);
 }
 
 /**
